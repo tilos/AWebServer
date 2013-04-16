@@ -180,17 +180,6 @@ private:
   HttpRequestType request_type_;
   EthernetClient client_;
 
-  // Reads a line from the HTTP request sent by an HTTP client. The
-  // line is put in `buffer' and up to `size' characters are written
-  // in it.
-//  boolean get_line(char* buffer, int size);
-
-  // Returns true if the header is marked as requested in the headers_
-  // array. As a side effect, the pointer to the actual header is made
-  // to point to the one in the headers_ array.
-//  boolean is_requested_header(const char** header);
-
-//  boolean assign_header_value(const char* header, char* value);
 };
 
 #endif /* __WEB_SERVER_H__ */
