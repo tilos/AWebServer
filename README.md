@@ -1,7 +1,11 @@
 AWebServer
 ==========
-is a Http-Server for Arduino with full file managing support, real time clock and optionaly Json support.
+is a Http-Server for Arduino with full file managing support, real time clock, Udp discovery
+and optionaly Json support.
 
+As full version with Json support and DEBUG flag it takes ~ 45.000 bytes and a Arduino Mega is needed.
+Without this and commenting out UdpServices::serveDiscovery(); in loop() it takes ~32.800 bytes. 
+( and allmost fits on a Arduino UNO, soon I'll publish a version that fits)
 
 
 External dependencies
