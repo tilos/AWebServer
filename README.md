@@ -22,4 +22,4 @@ AWebServer depends on the external library SdFat ( (C) 2012 by William Greiman )
 and, if Json is needed, on aJson lib ( (c) 2001, Marcus Nowotny ) (https://github.com/interactive-matter/aJson).
 
 There is also a real time support and Udp-discovery included. All features can be tested with 
-DuinoExplorer, available on codeplex (http://duinoexplorer.codeplex.com/).
+DuinoExplorer from Windows (available on codeplex http://duinoexplorer.codeplex.com/) or DuinoFinder from iOS (https://duinofinder.codeplex.com/).
