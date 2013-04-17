@@ -1,6 +1,6 @@
 /*
 
-AtMegaWebServer Library, Copyright (c) 2013 Tilo Szepan, Immo Wache
+AtMegaWebServer Library, Copyright (c) 2013 Tilo Szepan, Immo Wache  <https://github.com/tilos/AWebServer.git>
 
 Based on the TinyWebServer Library, Copyright (C) 2010 Ovidiu Predescu <ovidiu@gmail.com>
 
