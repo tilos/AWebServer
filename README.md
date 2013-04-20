@@ -1,7 +1,8 @@
 AWebServer
 ==========
-is a Http-Server for Arduino with full file managing support, real time clock, Udp discovery
-and optionaly Json support.
+is a Http-Server for Arduino with full file managing support on SD card, file system time support (NTP), UDP broadcast discovery and optionaly Json support.
+
+The code is based on the TinyWebServer Library, Copyright (C) 2010 Ovidiu Predescu https://github.com/ovidiucp/TinyWebServer. 
 
 It supports all file managing http-commands (GET, PUT, DELETE) and additional rename (non http: MOVE).
 Uploaded files and folders will get the actual local time. If the DEBUG flag is set, all actions will
