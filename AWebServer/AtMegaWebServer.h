@@ -1,6 +1,6 @@
 /*
 
-AtMegaWebServer Library, Copyright (c) 2013 Tilo Szepan, Immo Wache  <https://github.com/tilos/AWebServer.git>
+AtMegaWebServer Library, Copyright (c) 2013 Tilo Szepan, Immo Wache <https://github.com/tilos/AWebServer.git>
 
 Based on the TinyWebServer Library, Copyright (C) 2010 Ovidiu Predescu <ovidiu@gmail.com>
 
@@ -33,7 +33,7 @@ class AtMegaWebServer;
 
 
 namespace WebServerHandler {
-const int SDC_PIN = 4;
+  const int SDC_PIN = 4;
 
   boolean init(uint8_t rate = SPI_FULL_SPEED, uint8_t pin = SDC_PIN);
   boolean put_handler(AtMegaWebServer& web_server);

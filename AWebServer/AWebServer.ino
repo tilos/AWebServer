@@ -24,7 +24,12 @@ CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFT
 
 // if Json should be supported set JSON to 1, otherwise 0
 // There is an overall size increase of about 5600 bytes in code size for Json-Support 
+#include "global.h"
+#if UNO
+#define JSON 0
+#else
 #define JSON 1
+#endif
 
 #include <SPI.h>
 #include <Ethernet.h>
@@ -32,7 +37,6 @@ CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFT
 #include <SdFat.h>
 #include "AtMegaWebServer.h"
 #include "UdpServices.h"
-#include "global.h"
 
 
 // aJson is a Json-Parser from Marcus Nowotny and as lib for Arduino available
@@ -45,9 +49,11 @@ AtMegaWebServer::PathHandler handlers[] = {
   {"/" "*", AtMegaWebServer::PUT, &WebServerHandler::put_handler},
   {"/" "*", AtMegaWebServer::GET, &WebServerHandler::get_handler},
   {"/" "*", AtMegaWebServer::DELETE, &WebServerHandler::delete_handler},
+#if !UNO
   {"/" "*", AtMegaWebServer::MOVE, &WebServerHandler::move_handler},
+#endif
 #if JSON
-// an example how to obtain a free number of values and giving a reply
+// an example how to add a free number of values and giving the sum as result
   {"/" "*", AtMegaWebServer::POST, &json_handler},
 #endif
   {NULL}
@@ -120,7 +126,9 @@ void loop() {
     freeMem("freeMem after request")
 #endif
   ;
+#if !UNO
   UdpServices::serveDiscovery();
+#endif
   UdpServices::maintainTime();
 }
 
@@ -141,7 +149,6 @@ boolean json_handler(AtMegaWebServer& web_server){
   }
   EthernetClient client = web_server.get_client();
   long size = 0;
-//  int read = 0;
   while(size < length && web_server.waitClientAvailable()){
     size += client.read((uint8_t*)(buffer + size), sizeof(buffer) - size);
   }
@@ -149,7 +156,7 @@ boolean json_handler(AtMegaWebServer& web_server){
   int val;
   if(parseJson(buffer, &val)){
 #if DEBUG
-      Serial << "json parsed: " << val << " request: " << buffer << LF;;
+      Serial << "json parsed: " << val << LF << " request: " << LF << buffer << LF;;
 #endif
     web_server.sendHttpResult(200);
     web_server << "{\"result\": " << val << "}";
