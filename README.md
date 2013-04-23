@@ -1,6 +1,7 @@
 AWebServer
 ==========
-is a Http-Server for Arduino with full file managing support on SD card, file system time support (NTP), UDP broadcast discovery and optionaly Json support.
+is a Http-Server for Arduino with full file managing support on SD card, file system time support (NTP), UDP broadcast discovery and optionaly Json support. 
+This repository is designed as a single sketch for testing and developing purposes. If you prefer it as a library take https://github.com/tilos/AtMegaWebServer
 
 The code is based on the TinyWebServer Library, Copyright (C) 2010 Ovidiu Predescu https://github.com/ovidiucp/TinyWebServer. 
 
