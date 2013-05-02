@@ -11,7 +11,7 @@ Uploaded files and folders will get the actual local time. The clock starts auto
 by setting the TIME_REQU_INTV in UdpServices.cpp, even the difference to GMT with TimeOffset).
 How it works and looks like you can see here:
 
-![screenshot](https://github.com/tilos/AWebServer/raw/master/AWS_in_Mozilla.PNG) 
+![screenshot](https://github.com/tilos/AWebServer/raw/master/AWS_in_Mozilla.png) 
 
 or here (using DuinoExplorer from http://duinoexplorer.codeplex.com/ as client).
 
