@@ -9,7 +9,11 @@ The code is based on the TinyWebServer Library, Copyright (C) 2010 Ovidiu Predes
 It supports all file managing http-commands (GET, PUT, DELETE) and additional rename (non http (WebDAV): MOVE).
 Uploaded files and folders will get the actual local time. The clock starts automatical and will be set every 2 hours (can be freely selected
 by setting the TIME_REQU_INTV in UdpServices.cpp, even the difference to GMT with TimeOffset).
-How it works and looks like you can see here (using DuinoExplorer from http://duinoexplorer.codeplex.com/ as client).
+How it works and looks like you can see here:
+
+![screenshot](https://github.com/tilos/AWebServer/raw/master/AWS_in_Mozilla.PNG) 
+
+or here (using DuinoExplorer from http://duinoexplorer.codeplex.com/ as client).
 
 ![screenshot](https://github.com/tilos/AWebServer/raw/master/explore_AWS.PNG) 
 
@@ -42,8 +46,8 @@ _____________________
 External dependencies:
 =====================
 
-AWebServer depends on the external library SdFat ( (C) 2012 by William Greiman ) (http://code.google.com/p/sdfatlib/)
-and, if Json is needed, on aJson lib ( (c) 2001, Marcus Nowotny ) (https://github.com/interactive-matter/aJson).
+AWebServer depends on the external library SdFat ( (C) 2012 by William Greiman ) (http://code.google.com/p/sdfatlib/), 
+Flash version 4.0 (http://arduiniana.org/libraries/flash/) and, if Json is needed, on aJson lib ( (c) 2001, Marcus Nowotny ) (https://github.com/interactive-matter/aJson).
 
 All features can be tested with DuinoExplorer from Windows (available on codeplex http://duinoexplorer.codeplex.com/) 
 or DuinoFinder from iOS (https://duinofinder.codeplex.com/).
